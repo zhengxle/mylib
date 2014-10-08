@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
     int result;
     /* gettimeofday(&start, NULL); */
     memset(&sum, 0, sizeof(sum));
-    for (j = 0; j < 2000; j++) {
+    for (j = 0; j < 20; j++) {
         unsigned long long max = 0, min = 5000000;
         for (i = 0; i < SIZE; i++) {
             num = rand() % (SZ << 6);
@@ -92,10 +92,10 @@ int main(int argc, char *argv[])
         printf("%d, consume time = %lu\n", j, 1000000 * (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec));
         printf("%d clear bit set, max = %llu, min=[%llu]\n", j, max, min);
         gettimeofday(&start, NULL);
-        for (i = 0; i < SIZE; ++i) {
+        for (i = total; i >= 0; --i) {
             array[array2[i] >> 6] = 0;
         }
-        printf("result maxbit = %llu\n", array[max>> 6]);
+        printf("result maxbit = %llu\n", array[max >> 6]);
         gettimeofday(&end, NULL);
         memset(&delta, 0, sizeof(delta));
         timersub(&end, &start, &delta);
