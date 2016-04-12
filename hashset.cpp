@@ -10,8 +10,8 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  xiaoliang (zxl), xiaoliang.zxl@taobao.com
- *        Company:  Taobao.com
+ *         Author:  xiaolerzheng (zxl), xiaolerzheng@taobao.com
+ *        Company:
  *
  * =====================================================================================
  */

@@ -10,8 +10,8 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *         Author:  xiaoliang (zxl), xiaoliang.zxl@taobao.com
- *        Company:  Taobao.com
+ *         Author:  xiaolerzheng (zxl), xiaolerzheng@gmail.com
+ *        Company:
  *
  * =====================================================================================
  */
@@ -56,7 +56,7 @@ static inline int is_inset(unsigned long long *array, unsigned int size, unsigne
 
 int main(int argc, char *argv[])
 {
-    int i, j;
+    register int i, j;
     struct timeval start, end, sum;
     srand(time(NULL));
     unsigned long long *array = (unsigned long long *) calloc(SZ, sizeof(unsigned long long));
